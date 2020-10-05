@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<robot name="freebot_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<material name="Aluminum - Anodized Rough (Grey)">
+  <color rgba="0.5372549019607843 0.5372549019607843 0.5372549019607843 1.0"/>
+</material>
+<material name="Steel - Satin">
+  <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+</material>
+<material name="black">
+  <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
+</material>
+<material name="Opaque(39,196,255)">
+  <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
+</material>
+<material name="aluminum">
+  <color rgba="0.5372549019607843 0.5372549019607843 0.5372549019607843 1.0"/>
+</material>
+<material name="blue2">
+  <color rgba="0.058823529411764705 0.8 1.0 1.0"/>
+</material>
+<material name="blue1">
+  <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
+</material>
+</robot>
