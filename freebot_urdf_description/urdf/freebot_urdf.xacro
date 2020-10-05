@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <robot name="freebot_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
+<xacro:arg name="tf_prefix" default=""/>
 <xacro:include filename="$(find freebot_urdf_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find freebot_urdf_description)/urdf/freebot_urdf.trans" />
 <xacro:include filename="$(find freebot_urdf_description)/urdf/freebot_urdf.gazebo" />
-<link name="base_link">
+<link name="$(arg tf_prefix)/base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="5.788644740024379e-16 -1.1926662407975113e-07 0.019419883704314026"/>
     <mass value="1.0327024293593068"/>
@@ -36,7 +36,7 @@
   </collision>
 </link>
 
-<link name="OS_Shoulder_connector_06c_1">
+<link name="$(arg tf_prefix)/OS_Shoulder_connector_06c_1">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.03039370289078793 1.3251316521099543e-08 0.010093838443597597"/>
     <mass value="0.5649312746649212"/>
@@ -68,7 +68,7 @@
   </collision>
 </link>
 
-<link name="OS_Connector_shoulder_08_1">
+<link name="$(arg tf_prefix)/OS_Connector_shoulder_08_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0.027309309346106102 -0.013048790283129138 1.9964691722051953e-07"/>
     <mass value="0.4676784438857144"/>
@@ -100,7 +100,7 @@
   </collision>
 </link>
 
-<link name="OS_Wrist_connector_01_1">
+<link name="$(arg tf_prefix)/OS_Wrist_connector_01_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0285588469364604 -0.0004577057160622955 8.041520321855344e-08"/>
     <mass value="0.4901478983667687"/>
@@ -132,7 +132,7 @@
   </collision>
 </link>
 
-<link name="OS_Shoulder_connector_01d_1">
+<link name="$(arg tf_prefix)/OS_Shoulder_connector_01d_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0.012959388753636114 2.1853349424144736e-08 0.04081897310032624"/>
     <mass value="0.7652200389336291"/>
@@ -164,7 +164,7 @@
   </collision>
 </link>
 
-<link name="OS_Tool_Adapter_1">
+<link name="$(arg tf_prefix)/OS_Tool_Adapter_1">
   <inertial>
     <origin rpy="0 0 0" xyz="2.4091839634365897e-14 -0.012369036341301598 -8.212593333412066e-05"/>
     <mass value="0.4113331685848012"/>
@@ -187,7 +187,7 @@
   </collision>
 </link>
 
-<link name="OS_Upper_arm_tube_1">
+<link name="$(arg tf_prefix)/OS_Upper_arm_tube_1">
   <inertial>
     <origin rpy="0 0 0" xyz="-3.885780586188048e-16 -1.813439160552377e-15 0.11050000000000013"/>
     <mass value="0.4257953995856516"/>
@@ -210,7 +210,7 @@
   </collision>
 </link>
 
-<link name="OS_Connector_Elbow_07b_1">
+<link name="$(arg tf_prefix)/OS_Connector_Elbow_07b_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0.00031605452176478727 2.1925606150479413e-07 0.02489388503643264"/>
     <mass value="0.45527867911642017"/>
@@ -242,7 +242,7 @@
   </collision>
 </link>
 
-<link name="OS_Upper_arm_tube_2">
+<link name="$(arg tf_prefix)/OS_Upper_arm_tube_2">
   <inertial>
     <origin rpy="0 0 0" xyz="-1.0304257447302234e-15 -0.11050000000000368 -1.9984014443252818e-15"/>
     <mass value="0.4257953995856516"/>
@@ -265,7 +265,7 @@
   </collision>
 </link>
 
-<link name="OS_Connector_Elbow_07e_1">
+<link name="$(arg tf_prefix)/OS_Connector_Elbow_07e_1">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0028719702836169196 -0.027561945003886867 5.652840506797929e-08"/>
     <mass value="0.5104652508454282"/>
@@ -299,61 +299,61 @@
 
 <joint name="j1" type="continuous">
   <origin rpy="0 0 0" xyz="-0.006 0.0 0.061"/>
-  <parent link="OS_Shoulder_connector_01d_1"/>
-  <child link="OS_Shoulder_connector_06c_1"/>
+  <parent link="$(arg tf_prefix)/OS_Shoulder_connector_01d_1"/>
+  <child link="$(arg tf_prefix)/OS_Shoulder_connector_06c_1"/>
   <axis xyz="-1.0 0.0 -0.0"/>
 </joint>
 
 <joint name="j2" type="continuous">
   <origin rpy="0 0 0" xyz="0.0309 0.0 0.037"/>
-  <parent link="OS_Connector_Elbow_07b_1"/>
-  <child link="OS_Connector_shoulder_08_1"/>
+  <parent link="$(arg tf_prefix)/OS_Connector_Elbow_07b_1"/>
+  <child link="$(arg tf_prefix)/OS_Connector_shoulder_08_1"/>
   <axis xyz="1.0 -0.0 0.0"/>
 </joint>
 
 <joint name="j3" type="continuous">
   <origin rpy="0 0 0" xyz="0.0309 -0.041 0.0"/>
-  <parent link="OS_Connector_Elbow_07e_1"/>
-  <child link="OS_Wrist_connector_01_1"/>
+  <parent link="$(arg tf_prefix)/OS_Connector_Elbow_07e_1"/>
+  <child link="$(arg tf_prefix)/OS_Wrist_connector_01_1"/>
   <axis xyz="-1.0 0.0 -0.0"/>
 </joint>
 
 <joint name="j0" type="continuous">
   <origin rpy="0 0 0" xyz="0.0 0.0 0.0605"/>
-  <parent link="base_link"/>
-  <child link="OS_Shoulder_connector_01d_1"/>
+  <parent link="$(arg tf_prefix)/base_link"/>
+  <child link="$(arg tf_prefix)/OS_Shoulder_connector_01d_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
 </joint>
 
 <joint name="j4" type="continuous">
   <origin rpy="0 0 0" xyz="0.036 -0.0385 0.0"/>
-  <parent link="OS_Wrist_connector_01_1"/>
-  <child link="OS_Tool_Adapter_1"/>
+  <parent link="$(arg tf_prefix)/OS_Wrist_connector_01_1"/>
+  <child link="$(arg tf_prefix)/OS_Tool_Adapter_1"/>
   <axis xyz="-0.0 -1.0 -0.0"/>
 </joint>
 
 <joint name="Rigid10" type="fixed">
   <origin rpy="0 0 0" xyz="-0.0284 0.0 0.042"/>
-  <parent link="OS_Shoulder_connector_06c_1"/>
-  <child link="OS_Upper_arm_tube_1"/>
+  <parent link="$(arg tf_prefix)/OS_Shoulder_connector_06c_1"/>
+  <child link="$(arg tf_prefix)/OS_Upper_arm_tube_1"/>
 </joint>
 
 <joint name="Rigid11" type="fixed">
   <origin rpy="0 0 0" xyz="0.0 0.0 0.221"/>
-  <parent link="OS_Upper_arm_tube_1"/>
-  <child link="OS_Connector_Elbow_07b_1"/>
+  <parent link="$(arg tf_prefix)/OS_Upper_arm_tube_1"/>
+  <child link="$(arg tf_prefix)/OS_Connector_Elbow_07b_1"/>
 </joint>
 
 <joint name="Rigid12" type="fixed">
   <origin rpy="0 0 0" xyz="0.0309 -0.038 0.0"/>
-  <parent link="OS_Connector_shoulder_08_1"/>
-  <child link="OS_Upper_arm_tube_2"/>
+  <parent link="$(arg tf_prefix)/OS_Connector_shoulder_08_1"/>
+  <child link="$(arg tf_prefix)/OS_Upper_arm_tube_2"/>
 </joint>
 
 <joint name="Rigid13" type="fixed">
   <origin rpy="0 0 0" xyz="0.0 -0.221 0.0"/>
-  <parent link="OS_Upper_arm_tube_2"/>
-  <child link="OS_Connector_Elbow_07e_1"/>
+  <parent link="$(arg tf_prefix)/OS_Upper_arm_tube_2"/>
+  <child link="$(arg tf_prefix)/OS_Connector_Elbow_07e_1"/>
 </joint>
 
 </robot>
