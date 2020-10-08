@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /RobotModel1/Status1
         - /TF1
         - /RobotModel2
         - /Marker1
@@ -57,7 +56,7 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 0.699999988079071
+    - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
@@ -118,7 +117,7 @@ Visualization Manager:
           Show Trail: false
           Value: true
       Name: RobotModel
-      Robot Description: /desired/robot_description
+      Robot Description: arm/desired/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -141,68 +140,18 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: true
+      Enabled: false
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        real/OS_Connector_Elbow_07b_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Connector_Elbow_07e_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Connector_shoulder_08_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Shoulder_connector_01d_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Shoulder_connector_06c_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Tool_Adapter_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Upper_arm_tube_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Upper_arm_tube_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/OS_Wrist_connector_01_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        real/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: real/robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: true
+      Value: false
       Visual Enabled: true
     - Class: rviz/Marker
       Enabled: true
@@ -240,7 +189,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.5035865306854248
+      Distance: 1.7095580101013184
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -248,17 +197,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.01051964983344078
-        Y: -0.21362975239753723
-        Z: 0.23851677775382996
+        X: 0.019608279690146446
+        Y: 0.08642812073230743
+        Z: 0.13619717955589294
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.34479716420173645
+      Pitch: 0.6047970652580261
       Target Frame: <Fixed Frame>
-      Yaw: 1.258581519126892
+      Yaw: 2.318589925765991
     Saved: ~
 Window Geometry:
   Displays:
