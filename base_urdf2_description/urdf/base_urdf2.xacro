@@ -1,0 +1,271 @@
+<?xml version="1.0" ?>
+<robot name="base_urdf2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find base_urdf2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find base_urdf2_description)/urdf/base_urdf2.trans" />
+<xacro:include filename="$(find base_urdf2_description)/urdf/base_urdf2.gazebo" />
+<xacro:arg name="tf_prefix" default=""/>
+<link name="$(arg tf_prefix)base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030118479856442667 5.481613643184651e-07 0.01884821678256087"/>
+    <mass value="106.49952096731701"/>
+    <inertia ixx="1.10044" ixy="-0.000205" ixz="0.094957" iyy="2.088997" iyz="-4.5e-05" izz="2.74885"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body1_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body2_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body3_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body4_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body5_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body6_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body7_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body8_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body9_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body10_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body11_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body12_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Dark Grey)">
+      <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body13_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Yellow)">
+      <color rgba="0.1843137254901961 0.8509803921568627 1.0 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body14_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Yellow)">
+      <color rgba="0.1843137254901961 0.8509803921568627 1.0 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body15_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Yellow)">
+      <color rgba="0.1843137254901961 0.8509803921568627 1.0 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body16_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Yellow)">
+      <color rgba="0.1843137254901961 0.8509803921568627 1.0 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link_base_urdf2 v0_Body17_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Paint - Enamel Glossy (Yellow)">
+      <color rgba="0.1843137254901961 0.8509803921568627 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="$(arg tf_prefix)Wheel_Assy_01_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5818095039366042e-07 -0.054036798760615096 -8.681375665453572e-05"/>
+    <mass value="31.32360437601443"/>
+    <inertia ixx="0.14674" ixy="0.0" ixz="-0.0" iyy="0.268094" iyz="0.000215" izz="0.146808"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_1_base_urdf2 v0_Body1_Wheel_Assy_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Opaque(76,76,76)">
+      <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_1_base_urdf2 v0_Body2_Wheel_Assy_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Opaque(76,76,76)">
+      <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_1_base_urdf2 v0_Body3_Wheel_Assy_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Opaque(76,76,76)">
+      <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="$(arg tf_prefix)Wheel_Assy_01_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5818095050468273e-07 0.3740367987606148 8.681375665499716e-05"/>
+    <mass value="31.32360437601443"/>
+    <inertia ixx="0.14674" ixy="-0.0" ixz="0.0" iyy="0.268094" iyz="0.000215" izz="0.146808"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_2_base_urdf2 v0_Body1_Wheel_Assy_01_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Opaque(76,76,76)">
+      <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_2_base_urdf2 v0_Body2_Wheel_Assy_01_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Opaque(76,76,76)">
+      <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+    </material>
+  </visual>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_2_base_urdf2 v0_Body3_Wheel_Assy_01_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Opaque(76,76,76)">
+      <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.21011 0.16 0.03"/>
+    <geometry>
+      <mesh filename="package://base_urdf2_description/meshes/Wheel_Assy_01_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev9" type="continuous">
+  <origin rpy="0 0 0" xyz="0.21011 -0.16 -0.03"/>
+  <parent link="$(arg tf_prefix)base_link"/>
+  <child link="$(arg tf_prefix)Wheel_Assy_01_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="0.21011 -0.16 -0.03"/>
+  <parent link="$(arg tf_prefix)base_link"/>
+  <child link="$(arg tf_prefix)Wheel_Assy_01_2"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>

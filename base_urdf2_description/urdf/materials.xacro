@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<robot name="base_urdf2" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<material name="Glass - Light Color">
+  <color rgba="0.09803921568627451 0.09803921568627451 0.09803921568627451 1.0"/>
+</material>
+<material name="Aluminum - Anodized Rough (Grey)">
+  <color rgba="0.5372549019607843 0.5372549019607843 0.5372549019607843 1.0"/>
+</material>
+<material name="Aluminum - Satin">
+  <color rgba="0.9607843137254902 0.9607843137254902 0.9647058823529412 1.0"/>
+</material>
+<material name="Opaque(76,76,76)">
+  <color rgba="0.2980392156862745 0.2980392156862745 0.2980392156862745 1.0"/>
+</material>
+<material name="Paint - Enamel Glossy (Dark Grey)">
+  <color rgba="0.34901960784313724 0.34901960784313724 0.34901960784313724 1.0"/>
+</material>
+<material name="Glass - Heavy Color (Blue)">
+  <color rgba="0.4235294117647059 0.7686274509803922 0.8549019607843137 1.0"/>
+</material>
+<material name="Aluminum - Bead Blasted">
+  <color rgba="0.9607843137254902 0.9607843137254902 0.9647058823529412 1.0"/>
+</material>
+<material name="Paint - Enamel Glossy (Yellow)">
+  <color rgba="0.1843137254901961 0.8509803921568627 1.0 1.0"/>
+</material>
+<material name="Glass - Light Color (Blue)">
+  <color rgba="0.4235294117647059 0.7686274509803922 0.8549019607843137 1.0"/>
+</material>
+<material name="Steel - Satin">
+  <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+</material>
+</robot>
