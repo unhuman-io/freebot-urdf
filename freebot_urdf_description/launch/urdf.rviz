@@ -161,6 +161,15 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /basic_controls/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -189,7 +198,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.7095580101013184
+      Distance: 1.3790205717086792
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -225,5 +234,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1518
-  X: 726
-  Y: 27
+  X: 297
+  Y: 389
