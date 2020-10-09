@@ -59,68 +59,18 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: true
+      Enabled: false
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        sim/OS_Connector_Elbow_07b_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Connector_Elbow_07e_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Connector_shoulder_08_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Shoulder_connector_01d_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Shoulder_connector_06c_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Tool_Adapter_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Upper_arm_tube_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Upper_arm_tube_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/OS_Wrist_connector_01_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sim/base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: arm/desired/robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: true
+      Value: false
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: false
@@ -155,10 +105,10 @@ Visualization Manager:
       Visual Enabled: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /goal_marker
+      Marker Topic: /arm/goal_marker
       Name: Marker
       Namespaces:
-        {}
+        basic_shapes: true
       Queue Size: 100
       Value: true
     - Class: rviz/InteractiveMarkers
@@ -206,17 +156,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.019608279690146446
-        Y: 0.08642812073230743
-        Z: 0.13619717955589294
+        X: -0.0604606494307518
+        Y: -0.17829975485801697
+        Z: 0.22588026523590088
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6047970652580261
+      Pitch: 0.6397972106933594
       Target Frame: <Fixed Frame>
-      Yaw: 2.318589925765991
+      Yaw: 2.6485917568206787
     Saved: ~
 Window Geometry:
   Displays:

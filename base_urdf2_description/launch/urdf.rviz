@@ -181,7 +181,7 @@ Visualization Manager:
     Background Color: 48; 48; 48
     Default Light: true
     Fixed Frame: world
-    Frame Rate: 30
+    Frame Rate: 100
   Name: root
   Tools:
     - Class: rviz/Interact
@@ -220,9 +220,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.46039697527885437
+      Pitch: 0.5003970861434937
       Target Frame: base_link
-      Yaw: 0.593582272529602
+      Yaw: 0.6335822343826294
     Saved: ~
 Window Geometry:
   Displays:
@@ -241,4 +241,4 @@ Window Geometry:
     collapsed: false
   Width: 1769
   X: 1840
-  Y: 279
+  Y: 205
