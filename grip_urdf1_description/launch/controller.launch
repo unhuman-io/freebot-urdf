@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find grip_urdf1_description)/launch/controller.yaml" command="load"/>
+<node args="Slider2_position_controller Slider3_position_controller joint_state_controller " name="controller_spawner" ns="grip_urdf1" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/grip_urdf1/joint_states"/>
+</node>
+
+</launch>

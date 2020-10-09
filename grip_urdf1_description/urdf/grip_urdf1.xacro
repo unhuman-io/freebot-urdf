@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<robot name="grip_urdf1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find grip_urdf1_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find grip_urdf1_description)/urdf/grip_urdf1.trans" />
+<xacro:include filename="$(find grip_urdf1_description)/urdf/grip_urdf1.gazebo" />
+<xacro:arg name="tf_prefix" default=""/>
+<link name="$(arg tf_prefix)base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006946610886831786 0.0035780166273227205 -0.0003164257368845329"/>
+    <mass value="0.21004662945285396"/>
+    <inertia ixx="5.5e-05" ixy="7e-06" ixz="-5e-06" iyy="0.000256" iyz="1e-06" izz="0.000206"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/base_link_grip_urdf1 v0_Body1_base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Steel - Satin">
+      <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="$(arg tf_prefix)motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010000306616649128 3.469446951953614e-18 1.4668454062330035e-17"/>
+    <mass value="0.09667308913626513"/>
+    <inertia ixx="9e-06" ixy="0.0" ixz="0.0" iyy="8e-06" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.057167 -0.016 0.0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/motor_1_grip_urdf1 v0_Body1_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Steel - Satin">
+      <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.057167 -0.016 0.0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="$(arg tf_prefix)finger_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0008908942564820792 0.0264560567515969 0.005010079496025799"/>
+    <mass value="0.10777043072488268"/>
+    <inertia ixx="7.2e-05" ixy="7e-06" ixz="-3e-06" iyy="1.2e-05" iyz="1.3e-05" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.005667 -0.016 0.0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/finger_1_grip_urdf1 v0_Body1_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Steel - Satin">
+      <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.005667 -0.016 0.0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="$(arg tf_prefix)finger_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0008915074897803414 0.0264560567515969 -0.005010079496025876"/>
+    <mass value="0.10777043072488268"/>
+    <inertia ixx="7.2e-05" ixy="-7e-06" ixz="-3e-06" iyy="1.2e-05" iyz="-1.3e-05" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.003833 -0.016 0.0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/finger_2_grip_urdf1 v0_Body1_finger_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Steel - Satin">
+      <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.003833 -0.016 0.0"/>
+    <geometry>
+      <mesh filename="package://grip_urdf1_description/meshes/finger_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.057167 0.016 0.0"/>
+  <parent link="$(arg tf_prefix)base_link"/>
+  <child link="$(arg tf_prefix)motor_1"/>
+</joint>
+
+<joint name="Slider2" type="prismatic">
+  <origin rpy="0 0 0" xyz="-0.005667 0.016 0.0"/>
+  <parent link="$(arg tf_prefix)base_link"/>
+  <child link="$(arg tf_prefix)finger_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit effort="100" lower="-0.035" upper="0.0025" velocity="100"/>
+</joint>
+
+<joint name="Slider3" type="prismatic">
+  <origin rpy="0 0 0" xyz="0.003833 0.016 0.0"/>
+  <parent link="$(arg tf_prefix)base_link"/>
+  <child link="$(arg tf_prefix)finger_2"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit effort="100" lower="0.0" upper="0.0" velocity="100"/>
+  <mimic joint="Slider2" multiplier="-1.0"/>
+</joint>
+
+</robot>
