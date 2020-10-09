@@ -2,6 +2,7 @@
   <arg default="$(find freebot_urdf_description)/urdf/freebot_urdf.xacro" name="model"/>
   <arg default="true" name="gui"/>
   <arg default="$(find freebot_urdf_description)/launch/urdf.rviz" name="rvizconfig"/>
+  <arg default="$(find freebot_urdf_description)/launch/urdf2.rviz" name="rvizconfig2"/>
 
   <param name="use_gui" value="$(arg gui)"/>
   <node pkg="tf2_ros" type="static_transform_publisher" name="base_camera" args=".1 -.2 -.1 0 0 0 1 base_link base_camera" />
@@ -21,5 +22,5 @@
     <node pkg="tf2_ros" type="static_transform_publisher" name="base_link" args="0 0 0 0 0 0 1 base_link real/base_link" />
   </group>
   <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
-  <node args="-d $(arg rvizconfig)" name="rviz2" pkg="rviz" required="true" type="rviz"/>
+  <node args="-d $(arg rvizconfig2)" name="rviz2" pkg="rviz" required="true" type="rviz"/>
 </launch>
