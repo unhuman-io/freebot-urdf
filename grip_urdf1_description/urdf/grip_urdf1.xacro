@@ -5,7 +5,7 @@
 <xacro:include filename="$(find grip_urdf1_description)/urdf/grip_urdf1.trans" />
 <xacro:include filename="$(find grip_urdf1_description)/urdf/grip_urdf1.gazebo" />
 <xacro:arg name="tf_prefix" default=""/>
-<link name="$(arg tf_prefix)base_link">
+<link name="$(arg tf_prefix)/base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.006946610886831786 0.0035780166273227205 -0.0003164257368845329"/>
     <mass value="0.21004662945285396"/>
@@ -28,7 +28,7 @@
   </collision>
 </link>
 
-<link name="$(arg tf_prefix)motor_1">
+<link name="$(arg tf_prefix)/motor_1">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.010000306616649128 3.469446951953614e-18 1.4668454062330035e-17"/>
     <mass value="0.09667308913626513"/>
@@ -51,7 +51,7 @@
   </collision>
 </link>
 
-<link name="$(arg tf_prefix)finger_1">
+<link name="$(arg tf_prefix)/finger_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0008908942564820792 0.0264560567515969 0.005010079496025799"/>
     <mass value="0.10777043072488268"/>
@@ -74,7 +74,7 @@
   </collision>
 </link>
 
-<link name="$(arg tf_prefix)finger_2">
+<link name="$(arg tf_prefix)/finger_2">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0008915074897803414 0.0264560567515969 -0.005010079496025876"/>
     <mass value="0.10777043072488268"/>
@@ -99,22 +99,22 @@
 
 <joint name="Rigid1" type="fixed">
   <origin rpy="0 0 0" xyz="-0.057167 0.016 0.0"/>
-  <parent link="$(arg tf_prefix)base_link"/>
-  <child link="$(arg tf_prefix)motor_1"/>
+  <parent link="$(arg tf_prefix)/base_link"/>
+  <child link="$(arg tf_prefix)/motor_1"/>
 </joint>
 
 <joint name="Slider2" type="prismatic">
   <origin rpy="0 0 0" xyz="-0.005667 0.016 0.0"/>
-  <parent link="$(arg tf_prefix)base_link"/>
-  <child link="$(arg tf_prefix)finger_1"/>
+  <parent link="$(arg tf_prefix)/base_link"/>
+  <child link="$(arg tf_prefix)/finger_1"/>
   <axis xyz="1.0 0.0 -0.0"/>
   <limit effort="100" lower="-0.035" upper="0.0025" velocity="100"/>
 </joint>
 
 <joint name="Slider3" type="prismatic">
   <origin rpy="0 0 0" xyz="0.003833 0.016 0.0"/>
-  <parent link="$(arg tf_prefix)base_link"/>
-  <child link="$(arg tf_prefix)finger_2"/>
+  <parent link="$(arg tf_prefix)/base_link"/>
+  <child link="$(arg tf_prefix)/finger_2"/>
   <axis xyz="1.0 0.0 -0.0"/>
   <limit effort="100" lower="0.0" upper="0.0" velocity="100"/>
   <mimic joint="Slider2" multiplier="-1.0"/>

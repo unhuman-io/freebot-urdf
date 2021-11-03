@@ -5,7 +5,7 @@
 <xacro:include filename="$(find base_urdf2_description)/urdf/base_urdf2.trans" />
 <xacro:include filename="$(find base_urdf2_description)/urdf/base_urdf2.gazebo" />
 <xacro:arg name="tf_prefix" default=""/>
-<link name="$(arg tf_prefix)base_link">
+<link name="$(arg tf_prefix)/base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="0.030118479856442667 5.481613643184651e-07 0.01884821678256087"/>
     <mass value="106.49952096731701"/>
@@ -172,7 +172,7 @@
   </collision>
 </link>
 
-<link name="$(arg tf_prefix)Wheel_Assy_01_1">
+<link name="$(arg tf_prefix)/Wheel_Assy_01_1">
   <inertial>
     <origin rpy="0 0 0" xyz="1.5818095039366042e-07 -0.054036798760615096 -8.681375665453572e-05"/>
     <mass value="31.32360437601443"/>
@@ -213,7 +213,7 @@
   </collision>
 </link>
 
-<link name="$(arg tf_prefix)Wheel_Assy_01_2">
+<link name="$(arg tf_prefix)/Wheel_Assy_01_2">
   <inertial>
     <origin rpy="0 0 0" xyz="1.5818095050468273e-07 0.3740367987606148 8.681375665499716e-05"/>
     <mass value="31.32360437601443"/>
@@ -256,15 +256,15 @@
 
 <joint name="Rev9" type="continuous">
   <origin rpy="0 0 0" xyz="0.21011 -0.16 -0.03"/>
-  <parent link="$(arg tf_prefix)base_link"/>
-  <child link="$(arg tf_prefix)Wheel_Assy_01_1"/>
+  <parent link="$(arg tf_prefix)/base_link"/>
+  <child link="$(arg tf_prefix)/Wheel_Assy_01_1"/>
   <axis xyz="-0.0 -1.0 -0.0"/>
 </joint>
 
 <joint name="Rev10" type="continuous">
   <origin rpy="0 0 0" xyz="0.21011 -0.16 -0.03"/>
-  <parent link="$(arg tf_prefix)base_link"/>
-  <child link="$(arg tf_prefix)Wheel_Assy_01_2"/>
+  <parent link="$(arg tf_prefix)/base_link"/>
+  <child link="$(arg tf_prefix)/Wheel_Assy_01_2"/>
   <axis xyz="-0.0 -1.0 -0.0"/>
 </joint>
 

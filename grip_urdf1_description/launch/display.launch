@@ -2,11 +2,11 @@
   <arg default="$(find grip_urdf1_description)/urdf/grip_urdf1.xacro" name="model"/>
   <arg default="true" name="gui"/>
   <arg default="$(find grip_urdf1_description)/launch/urdf.rviz" name="rvizconfig"/>
-  <param command="$(find xacro)/xacro $(arg model) tf_prefix:=gripper/" name="robot_description"/>
+  <param command="$(find xacro)/xacro $(arg model) tf_prefix:=gripper" name="robot_description"/>
   <param name="use_gui" value="$(arg gui)"/>
-  <!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
     <param name="rate" value="100"/>
-  </node> -->
+  </node>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
     <param name="publish_frequency" value="1000"/>
   </node>

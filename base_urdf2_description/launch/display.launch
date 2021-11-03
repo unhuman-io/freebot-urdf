@@ -2,9 +2,8 @@
   <arg default="$(find base_urdf2_description)/urdf/base_urdf2.xacro" name="model"/>
   <arg default="true" name="gui"/>
   <arg default="$(find base_urdf2_description)/launch/urdf.rviz" name="rvizconfig"/>
-  <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
-  <param name="use_gui" value="$(arg gui)"/>
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+  <param command="$(find xacro)/xacro $(arg model) tf_prefix:=base" name="robot_description"/>
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
     <param name="rate" value="100" />
   </node>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
