@@ -1,7 +1,7 @@
 <launch>
-  <arg default="$(find freebot_urdf_description)/urdf/freebot_urdf.xacro" name="model"/>
+  <arg default="$(find obot_urdf_description)/urdf/obot_urdf.xacro" name="model"/>
   <arg default="true" name="gui"/>
-  <arg default="$(find freebot_urdf_description)/launch/urdf.rviz" name="rvizconfig"/>
+  <arg default="$(find obot_urdf_description)/launch/urdf.rviz" name="rvizconfig"/>
 
   <param name="use_gui" value="$(arg gui)"/>
   <group ns="sim">

@@ -1,8 +1,8 @@
 <launch>
-  <arg default="$(find freebot_urdf_description)/urdf/freebot_urdf.xacro" name="model"/>
+  <arg default="$(find obot_urdf_description)/urdf/obot_urdf.xacro" name="model"/>
   <arg default="true" name="gui"/>
-  <arg default="$(find freebot_urdf_description)/launch/urdf.rviz" name="rvizconfig"/>
-  <arg default="$(find freebot_urdf_description)/launch/urdf2.rviz" name="rvizconfig2"/>
+  <arg default="$(find obot_urdf_description)/launch/urdf.rviz" name="rvizconfig"/>
+  <arg default="$(find obot_urdf_description)/launch/urdf2.rviz" name="rvizconfig2"/>
 
   <param name="use_gui" value="$(arg gui)"/>
   <node pkg="tf2_ros" type="static_transform_publisher" name="base_camera" args=".1 -.2 -.1 0 0 0 1 base_link base_camera" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<robot name="freebot_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="obot_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <xacro:arg name="tf_prefix" default=""/>
-<xacro:include filename="$(find freebot_urdf_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find freebot_urdf_description)/urdf/freebot_urdf.trans" />
-<xacro:include filename="$(find freebot_urdf_description)/urdf/freebot_urdf.gazebo" />
+<xacro:include filename="$(find obot_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find obot_urdf_description)/urdf/obot_urdf.trans" />
+<xacro:include filename="$(find obot_urdf_description)/urdf/obot_urdf.gazebo" />
 <link name="$(arg tf_prefix)/base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="5.788644740024379e-16 -1.1926662407975113e-07 0.019419883704314026"/>
@@ -13,7 +13,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/base_link_freebot_urdf v0_Body1_base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/base_link_obot_urdf v0_Body1_base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -22,7 +22,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/base_link_freebot_urdf v0_Body2_base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/base_link_obot_urdf v0_Body2_base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -31,7 +31,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -45,7 +45,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.006 0.0 -0.1215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Shoulder_connector_06c_1_freebot_urdf v0_Body1_OS_Shoulder_connector_06c_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Shoulder_connector_06c_1_obot_urdf v0_Body1_OS_Shoulder_connector_06c_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -54,7 +54,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.006 0.0 -0.1215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Shoulder_connector_06c_1_freebot_urdf v0_Body2_OS_Shoulder_connector_06c_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Shoulder_connector_06c_1_obot_urdf v0_Body2_OS_Shoulder_connector_06c_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue1">
       <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
@@ -63,7 +63,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.006 0.0 -0.1215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Shoulder_connector_06c_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Shoulder_connector_06c_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -77,7 +77,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0035 0.0 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_shoulder_08_1_freebot_urdf v0_Body1_OS_Connector_shoulder_08_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_shoulder_08_1_obot_urdf v0_Body1_OS_Connector_shoulder_08_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -86,7 +86,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0035 0.0 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_shoulder_08_1_freebot_urdf v0_Body2_OS_Connector_shoulder_08_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_shoulder_08_1_obot_urdf v0_Body2_OS_Connector_shoulder_08_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue2">
       <color rgba="0.058823529411764705 0.8 1.0 1.0"/>
@@ -95,7 +95,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.0035 0.0 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_shoulder_08_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_shoulder_08_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -109,7 +109,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0583 0.3 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Wrist_connector_01_1_freebot_urdf v0_Body1_OS_Wrist_connector_01_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Wrist_connector_01_1_obot_urdf v0_Body1_OS_Wrist_connector_01_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -118,7 +118,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0583 0.3 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Wrist_connector_01_1_freebot_urdf v0_Body2_OS_Wrist_connector_01_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Wrist_connector_01_1_obot_urdf v0_Body2_OS_Wrist_connector_01_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue1">
       <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
@@ -127,7 +127,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.0583 0.3 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Wrist_connector_01_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Wrist_connector_01_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -141,7 +141,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.0605"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Shoulder_connector_01d_1_freebot_urdf v0_Body1_OS_Shoulder_connector_01d_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Shoulder_connector_01d_1_obot_urdf v0_Body1_OS_Shoulder_connector_01d_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue1">
       <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
@@ -150,7 +150,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.0605"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Shoulder_connector_01d_1_freebot_urdf v0_Body2_OS_Shoulder_connector_01d_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Shoulder_connector_01d_1_obot_urdf v0_Body2_OS_Shoulder_connector_01d_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -159,7 +159,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.0605"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Shoulder_connector_01d_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Shoulder_connector_01d_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -173,7 +173,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0943 0.3385 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Tool_Adapter_1_freebot_urdf v0_Body1_OS_Tool_Adapter_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Tool_Adapter_1_obot_urdf v0_Body1_OS_Tool_Adapter_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="aluminum">
       <color rgba="0.5372549019607843 0.5372549019607843 0.5372549019607843 1.0"/>
@@ -182,7 +182,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.0943 0.3385 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Tool_Adapter_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Tool_Adapter_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -196,7 +196,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0344 0.0 -0.1635"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Upper_arm_tube_1_freebot_urdf v0_Body1_OS_Upper_arm_tube_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Upper_arm_tube_1_obot_urdf v0_Body1_OS_Upper_arm_tube_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="aluminum">
       <color rgba="0.5372549019607843 0.5372549019607843 0.5372549019607843 1.0"/>
@@ -205,7 +205,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.0344 0.0 -0.1635"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Upper_arm_tube_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Upper_arm_tube_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -219,7 +219,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0344 0.0 -0.3845"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_Elbow_07b_1_freebot_urdf v0_Body1_OS_Connector_Elbow_07b_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_Elbow_07b_1_obot_urdf v0_Body1_OS_Connector_Elbow_07b_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -228,7 +228,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0344 0.0 -0.3845"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_Elbow_07b_1_freebot_urdf v0_Body2_OS_Connector_Elbow_07b_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_Elbow_07b_1_obot_urdf v0_Body2_OS_Connector_Elbow_07b_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue1">
       <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
@@ -237,7 +237,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.0344 0.0 -0.3845"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_Elbow_07b_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_Elbow_07b_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -251,7 +251,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0274 0.038 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Upper_arm_tube_2_freebot_urdf v0_Body1_OS_Upper_arm_tube_2.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Upper_arm_tube_2_obot_urdf v0_Body1_OS_Upper_arm_tube_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="aluminum">
       <color rgba="0.5372549019607843 0.5372549019607843 0.5372549019607843 1.0"/>
@@ -260,7 +260,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.0274 0.038 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Upper_arm_tube_2.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Upper_arm_tube_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -274,7 +274,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0274 0.259 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_Elbow_07e_1_freebot_urdf v0_Body1_OS_Connector_Elbow_07e_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_Elbow_07e_1_obot_urdf v0_Body1_OS_Connector_Elbow_07e_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.25098039215686274 0.25098039215686274 0.25098039215686274 1.0"/>
@@ -283,7 +283,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0274 0.259 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_Elbow_07e_1_freebot_urdf v0_Body2_OS_Connector_Elbow_07e_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_Elbow_07e_1_obot_urdf v0_Body2_OS_Connector_Elbow_07e_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="blue1">
       <color rgba="0.15294117647058825 0.7686274509803922 1.0 1.0"/>
@@ -292,7 +292,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.0274 0.259 -0.4215"/>
     <geometry>
-      <mesh filename="package://freebot_urdf_description/meshes/OS_Connector_Elbow_07e_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://obot_urdf_description/meshes/OS_Connector_Elbow_07e_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
